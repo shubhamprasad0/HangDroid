@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ParentRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context="com.example.shubham.hangDroid.MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:textStyle="bold"
+        android:textColor="@color/hangDroidTitle"
+        android:text="@string/app_name"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="true"
+        android:layout_margin="@android:dimen/app_icon_size"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <Button
+            android:id="@+id/single_player_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Single Player"
+            android:textAllCaps="false"
+            android:onClick="startSinglePlayerGame"
+            android:textStyle="bold"
+            android:layout_margin="5dip"
+            android:layout_gravity="center_horizontal"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/multi_player_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="monospace"
+            android:text="Multi Player"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_margin="5dip"
+            android:typeface="normal"
+            android:onClick="startMultiPlayerGame"/>
+
+        <Button
+            android:id="@+id/scores_button"
+            android:layout_width="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="monospace"
+            android:text="Scores"
+            android:onClick="openScores"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+</RelativeLayout>
